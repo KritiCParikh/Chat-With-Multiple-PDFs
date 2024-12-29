@@ -21,21 +21,6 @@ A sophisticated PDF interaction tool that allows users to engage in conversation
 
 ## Workflow
 
-graph TD
-    A[Upload PDFs] --> B[Process PDFs]
-    B --> C[Text Extraction]
-    C --> D[Text Chunking]
-    D --> E[Generate Embeddings]
-    E --> F[Store in FAISS]
-    G[User Question] --> H[Search Vector Store]
-    H --> I[Retrieve Context]
-    I --> J[Generate Response]
-    J --> K[Display Answer]
-
-    style A fill:#64ffda,stroke:#333,stroke-width:2px
-    style G fill:#64ffda,stroke:#333,stroke-width:2px
-    style K fill:#64ffda,stroke:#333,stroke-width:2px
-
 **Document Processing Flow:**
 PDF upload → Text extraction → Chunking → Embedding generation → Vector storage
 
