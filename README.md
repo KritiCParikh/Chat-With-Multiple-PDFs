@@ -21,6 +21,8 @@ A sophisticated PDF interaction tool that allows users to engage in conversation
 
 ## Workflow
 
+![Chat with Multiple PDFs Interface](UI.jpg)
+
 **Document Processing Flow:**
 PDF upload → Text extraction → Chunking → Embedding generation → Vector storage
 
