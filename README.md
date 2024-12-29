@@ -2,6 +2,8 @@
 
 A sophisticated PDF interaction tool that allows users to engage in conversations with multiple PDF documents simultaneously using the power of Gemini AI and LangChain.
 
+![Chat with Multiple PDFs Interface](UI.jpg)
+
 ## Features
 
 - Upload and process multiple PDF documents
@@ -20,8 +22,6 @@ A sophisticated PDF interaction tool that allows users to engage in conversation
 - Text Processing: LangChain, PyPDF2
 
 ## Workflow
-
-![Chat with Multiple PDFs Interface](UI.jpg)
 
 **Document Processing Flow:**
 PDF upload → Text extraction → Chunking → Embedding generation → Vector storage
