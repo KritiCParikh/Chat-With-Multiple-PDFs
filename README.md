@@ -41,36 +41,44 @@ Question input → Vector search → Context retrieval → Response generation �
 - Gemini Pro generates detailed, context-aware responses
 
 ## Installation
+```
 git clone [repository-url]
 cd chat-with-pdfs
 pip install -r requirements.txt
-
+```
 
 ## Environment Setup
 Create a `.env` file in the root directory:
+```
 GOOGLE_API_KEY=your_api_key_here
+```
 
 ## Usage
+```
 streamlit run ChatWithPDFs.py
+```
 
 ## Key Components Explained
 **PDF Processing:**
+```
 def get_pdf_text(pdf_docs):
 text = ""
 for pdf in pdf_docs:
 pdf_reader = PdfReader(pdf)
 for page in pdf_reader.pages:
 text += page.extract_text()
-
+```
 **Text Chunking:**
+```
 def get_text_chunks(text):
 text_splitter = RecursiveCharacterTextSplitter(
 chunk_size=10000,
 chunk_overlap=1000
 )
 return text_splitter.split_text(text)
-
+```
 **Vector Store Implementation:**
+```
 def get_vector_store(text_chunks):
 embeddings = GoogleGenerativeAIEmbeddings(
 model = "models/embedding-001"
@@ -79,7 +87,7 @@ vector_store = FAISS.from_texts(
 text_chunks,
 embedding=embeddings
 )
-
+```
 ## Dependencies
 - streamlit
 - google-generativeai
